@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+
+# Local SQLite database (holds locally created accounts and orders)
+shop.db
+
+# Personal Claude Code settings
+.claude/settings.local.json
+
+# HTML report written by CI and local runs
+playwright-report/

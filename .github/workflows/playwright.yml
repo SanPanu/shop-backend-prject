@@ -1,0 +1,42 @@
+name: Playwright tests
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  ui-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.9"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt playwright pytest-html
+
+      - name: Install Chromium
+        run: python -m playwright install --with-deps chromium
+
+      # The browser tests are reported as Skipped when Chromium cannot start, so fail here instead.
+      - name: Check Chromium starts
+        run: python -c "from playwright.sync_api import sync_playwright as s; p = s().start(); p.chromium.launch().close(); p.stop()"
+
+      # DATABASE_URL is not set, so the tests use a temporary SQLite database.
+      - name: Run Playwright tests
+        run: python -m pytest tests/test_cases_ui.py --html=playwright-report/index.html --self-contained-html
+
+      - name: Upload HTML report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: |
+            playwright-report/
+            test-report/test_cases.csv
+            test-report/results.json
+          retention-days: 30

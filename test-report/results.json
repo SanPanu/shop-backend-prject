@@ -1570,5 +1570,41 @@
   "status": "Pass",
   "actual": "As expected",
   "automated_by": "test_cases_ui.py::test_ui_055"
+ },
+ {
+  "id": "TC-UI-056",
+  "area": "User interface",
+  "type": "UI",
+  "priority": "P0",
+  "title": "A quantity chosen on the product page reaches the cart",
+  "steps": "Log in, open product 5 (Cotton T-Shirt, \u20b9499), set quantity 3, click Add to cart, then open the cart",
+  "expected": "'Added to cart.' appears, the page stays on product 5 and the badge shows 3. The cart has one row for product 5 with price \u20b9499, quantity 3 and line total \u20b91,497; subtotal \u20b91,497; header shows '3 item(s)'",
+  "status": "Pass",
+  "actual": "As expected",
+  "automated_by": "test_cases_ui.py::test_ui_056"
+ },
+ {
+  "id": "TC-UI-057",
+  "area": "User interface",
+  "type": "UI",
+  "priority": "P2",
+  "title": "Adding to the cart does not change the stock shown",
+  "steps": "Log in, open product 10 (2 in stock), add 1 to the cart, then reload the page",
+  "expected": "Before and after the reload the page shows '2 in stock' and Add to cart stays enabled; the badge shows 1",
+  "status": "Pass",
+  "actual": "As expected",
+  "automated_by": "test_cases_ui.py::test_ui_057"
+ },
+ {
+  "id": "TC-UI-058",
+  "area": "User interface",
+  "type": "UI",
+  "priority": "P1",
+  "title": "A product added from its card shows on the cart page and links back",
+  "steps": "Log in, add Wireless Earbuds (product 7, \u20b91,999) from All products, open the cart, click the product name",
+  "expected": "Cart row shows 'Wireless Earbuds', \u20b91,999, quantity 1, line total \u20b91,999 and a Remove button; subtotal \u20b91,999. The name opens the Wireless Earbuds product page",
+  "status": "Pass",
+  "actual": "As expected",
+  "automated_by": "test_cases_ui.py::test_ui_058"
  }
 ]

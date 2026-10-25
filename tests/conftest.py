@@ -82,18 +82,29 @@ def pytest_sessionfinish(session):
 EXTERNAL = os.environ.get("SHOP_BASE_URL", "").rstrip("/")
 
 
+def _reset_with_guard(post_fn, url: str) -> None:
+    """Call POST <url> and abort via pytest.fail if it takes >= 5 s or returns non-200."""
+    start = time.monotonic()
+    r = post_fn(url, headers=RESET)
+    elapsed = time.monotonic() - start
+    if elapsed >= 5.0:
+        pytest.fail(f"Reset took {elapsed:.1f}s (> 5s limit)")
+    if r.status_code != 200:
+        pytest.fail(f"Reset failed with status {r.status_code}")
+
+
 @pytest.fixture
 def client():
     if EXTERNAL:
         with httpx.Client(base_url=EXTERNAL, timeout=30) as c:
-            assert c.post("/test/reset", headers=RESET).status_code == 200
+            _reset_with_guard(c.post, "/test/reset")
             yield c
         return
     from fastapi.testclient import TestClient
     from app.main import app
 
     with TestClient(app) as c:
-        assert c.post("/test/reset", headers=RESET).status_code == 200
+        _reset_with_guard(c.post, "/test/reset")
         yield c
 
 
@@ -113,14 +124,15 @@ def live_server():
     )
     base = "http://127.0.0.1:%d" % port
     try:
-        for _ in range(60):
+        deadline = time.monotonic() + 30
+        while time.monotonic() < deadline:
             try:
                 if httpx.get(base + "/health", timeout=1).status_code == 200:
                     break
             except httpx.HTTPError:
                 time.sleep(0.25)
         else:
-            pytest.fail("The shop server did not start")
+            pytest.fail("The shop server did not start within 30 s")
         yield base
     finally:
         proc.terminate()

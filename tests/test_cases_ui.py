@@ -847,6 +847,76 @@ def test_ui_055(page):
     expect(t(page, "detail-stock")).to_have_text("49 in stock")
 
 
+@case("TC-UI-056", "A quantity chosen on the product page reaches the cart",
+      "Log in, open product 5 (Cotton T-Shirt, ₹499), set quantity 3, click Add to cart, then open the cart",
+      "'Added to cart.' appears, the page stays on product 5 and the badge shows 3. The cart has one row for product 5 with price ₹499, "
+      "quantity 3 and line total ₹1,497; subtotal ₹1,497; header shows '3 item(s)'", "P0")
+def test_ui_056(page):
+    # -- Step 1: Add three units from the product page --
+    ui_login(page)
+    page.goto("/#/p/5")
+    t(page, "detail-qty").fill("3")
+    t(page, "detail-add").click()
+    expect(t(page, "message")).to_have_text("Added to cart.")
+    expect(t(page, "cart-count")).to_have_text("3")
+    expect(page).to_have_url(re.compile(r"#/p/5$"))
+
+    # -- Step 2: The cart shows the same quantity and totals --
+    page.goto("/#/cart")
+    row = t(page, "cart-row-5")
+    expect(row.get_by_role("cell")).to_have_text(["Cotton T-Shirt", "₹499", "", "₹1,497", "Remove"])   # quantity is an input
+    expect(row.get_by_test_id("cart-qty")).to_have_value("3")
+    expect(t(page, "cart-table").get_by_role("row")).to_have_count(2)   # header row + product 5
+    expect(t(page, "cart-subtotal")).to_have_text("₹1,497")
+    expect(t(page, "cart-units")).to_have_text("3 item(s)")
+
+
+@case("TC-UI-057", "Adding to the cart does not change the stock shown",
+      "Log in, open product 10 (2 in stock), add 1 to the cart, then reload the page",
+      "Before and after the reload the page shows '2 in stock' and Add to cart stays enabled; the badge shows 1", "P2")
+def test_ui_057(page):
+    # -- Step 1: Open product 10 --
+    ui_login(page)
+    page.goto("/#/p/10")
+    expect(t(page, "detail-stock")).to_have_text("2 in stock")
+
+    # -- Step 2: Add one unit; the stock shown stays the same --
+    t(page, "detail-add").click()
+    expect(t(page, "cart-count")).to_have_text("1")
+    expect(t(page, "detail-stock")).to_have_text("2 in stock")
+    expect(t(page, "detail-add")).to_be_enabled()
+
+    # -- Step 3: Reload and check again --
+    page.reload()
+    expect(t(page, "detail-name")).to_have_text("Steel Water Bottle")
+    expect(t(page, "detail-stock")).to_have_text("2 in stock")
+    expect(t(page, "detail-add")).to_be_enabled()
+    expect(t(page, "cart-count")).to_have_text("1")
+
+
+@case("TC-UI-058", "A product added from its card shows on the cart page and links back",
+      "Log in, add Wireless Earbuds (product 7, ₹1,999) from All products, open the cart, click the product name",
+      "Cart row shows 'Wireless Earbuds', ₹1,999, quantity 1, line total ₹1,999 and a Remove button; subtotal ₹1,999. "
+      "The name opens the Wireless Earbuds product page", "P1")
+def test_ui_058(page):
+    # -- Step 1: Add from the product card --
+    ui_login(page)
+    add_from_list(page, 7, 1)
+
+    # -- Step 2: Check the cart row --
+    page.goto("/#/cart")
+    row = t(page, "cart-row-7")
+    expect(row.get_by_role("cell")).to_have_text(["Wireless Earbuds", "₹1,999", "", "₹1,999", "Remove"])   # quantity is an input
+    expect(row.get_by_test_id("cart-qty")).to_have_value("1")
+    expect(row.get_by_test_id("cart-remove")).to_be_visible()
+    expect(t(page, "cart-subtotal")).to_have_text("₹1,999")
+
+    # -- Step 3: The name links back to the product page --
+    row.get_by_test_id("cart-name").click()
+    expect(page).to_have_url(re.compile(r"#/p/7$"))
+    expect(t(page, "detail-name")).to_have_text("Wireless Earbuds")
+
+
 # ---------------------------------------------------------------- page styling round
 @case("TC-UI-037", "Product page: breadcrumb and 'More in this category'",
       "Open Smart Watch (id 13). Read the breadcrumb and the 'More in Electronics' strip. Click Laptop Pro 15 in the strip. Then open Mystery Novel (id 29)",

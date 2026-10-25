@@ -741,7 +741,7 @@ async function showCart() {
       <thead><tr><th>Product</th><th class="num">Price</th><th>Quantity</th><th class="num">Total</th><th></th></tr></thead>
       <tbody>${cart.items.map(i => `
         <tr data-testid="cart-row-${i.product_id}">
-          <td><a href="#/p/${i.product_id}">${esc(i.name)}</a></td>
+          <td><a href="#/p/${i.product_id}" data-testid="cart-name">${esc(i.name)}</a></td>
           <td class="num">${rupee(i.unit_price)}</td>
           <td><input type="number" min="1" value="${i.quantity}" data-prev="${i.quantity}" style="width:76px" data-action="qty" data-id="${i.product_id}" data-testid="cart-qty" aria-label="Quantity"></td>
           <td class="num" data-testid="cart-line-total">${rupee(i.line_total)}</td>

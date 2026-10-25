@@ -1,0 +1,396 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 Verify and extend `conftest.py` reset fixture to assert completion within 5 seconds": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719443377
+      },
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719458625
+      }
+    ],
+    "1.3 Extend `live_server` fixture with explicit 30-second health-poll loop and port-freed teardown": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719443469
+      },
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719465522
+      }
+    ],
+    "1.4 Verify Playwright skip logic in `browser` fixture": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719443539
+      },
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719479432
+      }
+    ],
+    "1.5 Verify report-writing logic in `pytest_sessionfinish` and skip-merge behaviour": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719443655
+      },
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719486250
+      }
+    ],
+    "2.1 Add missing boundary and blank-input auth tests": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719443682
+      }
+    ],
+    "2.3 Add multi-session isolation and logout tests": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719443706
+      }
+    ],
+    "2.4 Add user-response password-field absence assertion": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719443728
+      }
+    ],
+    "3.1 Add literal `%` and `_` search tests and SQL injection safety tests": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719443753
+      }
+    ],
+    "3.2 Add multi-word search and `specs`-field search tests": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719443776
+      }
+    ],
+    "3.3 Add sort tie-breaking and combined-filter tests": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719443799
+      }
+    ],
+    "3.4 Add suggest endpoint tests": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719443823
+      }
+    ],
+    "4.1 Add cart isolation and token-ownership tests": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719443841
+      }
+    ],
+    "4.2 Add missing-body and malformed-body 422 tests": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719443864
+      }
+    ],
+    "4.3 Verify cart arithmetic assertion in all mutating operations": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719443885
+      }
+    ],
+    "5.1 Add coupon floor-arithmetic and empty-cart tests": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719443910
+      }
+    ],
+    "5.2 Add flat coupon minimum-order boundary test": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719443935
+      }
+    ],
+    "6.1 Add card-format, declined-card, and empty-cart checkout rejection tests": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719443955
+      }
+    ],
+    "6.2 Add invalid shipping and missing shipping tests": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719443977
+      }
+    ],
+    "6.3 Add invalid/expired coupon at checkout and minimum re-check tests": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719443999
+      }
+    ],
+    "6.4 Add concurrency oversell prevention test": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719444022
+      }
+    ],
+    "6.5 Add double-checkout (same-cart idempotency) and stock rollback tests": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719444044
+      }
+    ],
+    "6.6 Add shipping-details-stored and shipping-options tests": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719444070
+      }
+    ],
+    "7. Checkpoint — run API tests and verify suite is green": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719444093
+      }
+    ],
+    "8.1 Add order-detail field-match and timestamp tests": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719444121
+      }
+    ],
+    "8.2 Add order isolation (cross-user 404) test": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719444174
+      }
+    ],
+    "8.3 Add cancel-once and stock-restoration tests": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719444221
+      }
+    ],
+    "8.4 Add concurrent cancel test": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719444254
+      }
+    ],
+    "9.1 Add full seed-state verification and home-page HTML test": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719444274
+      }
+    ],
+    "9.2 Add reset endpoint access-control test": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719444296
+      }
+    ],
+    "9.3 Add cross-user cart and order access tests": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719444315
+      }
+    ],
+    "9.4 Add HTML-in-name stored-as-plain-text test": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719444338
+      }
+    ],
+    "9.5 Add integer overflow 4xx safety test": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719444361
+      }
+    ],
+    "10.1 Verify existing agent tests cover all Requirement 11 acceptance criteria": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719444386
+      }
+    ],
+    "10.2 Add agent actions isolation test if not already covered": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719444407
+      }
+    ],
+    "11.1 Set up file, imports, and `hypothesis` settings baseline": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719444437
+      }
+    ],
+    "11.2 Write Property 1 — product detail consistency": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719444464
+      }
+    ],
+    "11.4 Write Property 2 — product field invariants": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719444489
+      }
+    ],
+    "11.6 Write Property 3 — cart arithmetic invariant": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719444520
+      }
+    ],
+    "11.8 Write Property 4 — coupon discount invariant": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719444547
+      }
+    ],
+    "11.10 Write Property 5 — percentage coupon floor arithmetic": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719444572
+      }
+    ],
+    "11.12 Write Property 6 — checkout and order detail agreement": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719444605
+      }
+    ],
+    "11.14 Write Property 7 — stock restoration round-trip": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719444626
+      }
+    ],
+    "11.16 Write Property 8 — order isolation between users": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719444654
+      }
+    ],
+    "11.18 Write Property 9 — registration-then-login round-trip": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719444678
+      }
+    ],
+    "11.20 Write Property 10 — user response excludes password data": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719444700
+      }
+    ],
+    "11.22 Write Property 11 — JSON round-trip fidelity": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719444738
+      }
+    ],
+    "12. Checkpoint — run property tests and full API suite, verify all pass": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719444800
+      }
+    ],
+    "13.1 Verify all TC-UI-001 to TC-UI-036 cases are present and passing": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719444825
+      }
+    ],
+    "13.2 Verify chat assistant hidden test (TC-UI-028)": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719444848
+      }
+    ],
+    "13.3 Verify horizontal-scroll test at 375 px (TC-UI-026)": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719444871
+      }
+    ],
+    "13.4 Verify browser Back/Forward navigation test (TC-UI-025)": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719444893
+      }
+    ],
+    "13.5 Verify discount-percent UI consistency test (TC-UI-006)": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719444915
+      }
+    ],
+    "14. Final checkpoint — run the full test suite": [
+      {
+        "executionId": "ac1c91d2-2c8e-4241-a5e4-d46cb2dcce9a",
+        "chatSessionId": "sess_5c965715-45b3-4945-80f7-8248ed5e00bd",
+        "timestamp": 1791719444962
+      }
+    ]
+  }
+}

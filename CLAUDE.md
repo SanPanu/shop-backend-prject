@@ -30,7 +30,12 @@ Shop-Backend/
 │   ├── test_cases_ui.py   # Documented browser cases
 │   ├── test_shop.py       # Quick developer checks (not in the report)
 │   └── test_agent.py      # Quick developer checks (not in the report)
-├── test-report/           # test_cases.csv, results.json, Excel workbooks
+├── docs/
+│   ├── test-design/       # scenarios-<area>.md and strategy-<area>.md from the skills
+│   └── guides/            # Daily start-up and Claude skills guides (Excel)
+├── test-report/           # Test results: test_cases.csv, results.json, test-case workbooks
+├── skill-drafts/          # Skills not installed yet (log-bug, waiting for Jira)
+├── .vscode/settings.json  # VS Code: project Python, pytest, hidden generated files
 ├── websphere/             # Old Java/Oracle port. Out of date. Do not change.
 ├── README.md
 ├── requirements.txt

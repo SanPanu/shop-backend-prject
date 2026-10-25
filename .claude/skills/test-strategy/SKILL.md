@@ -6,7 +6,7 @@ description: Assign Practice Shop test scenarios to the best test layer (Unit, A
 When asked for a test strategy, read the scenario document for the requested area (created by `create-scenarios`),
 `CLAUDE.md`, `app/main.py` and `app/static/index.html`, then write a document in exactly the format below: same
 header, same seven sections, same table columns. Never invent a function, line number or message; quote what the
-code does and re-check every `File:Line` against the current files. Save it as `test-report/strategy-<area>.md`.
+code does and re-check every `File:Line` against the current files. Save it as `docs/test-design/strategy-<area>.md`.
 
 # Practice Shop — Order Management Test Strategy
 

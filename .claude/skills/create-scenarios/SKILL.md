@@ -6,7 +6,7 @@ description: Create test scenario documents for a Practice Shop feature area. Us
 When asked for scenarios, read `CLAUDE.md`, `app/main.py` and `app/static/index.html` for the real behaviour of the
 requested area, then write a document in exactly the format below: same header, same six sections, same fields per
 scenario. Never invent a rule, message or endpoint; quote what the code does. Save it as
-`test-report/scenarios-<area>.md`.
+`docs/test-design/scenarios-<area>.md`.
 
 # Practice Shop — Order Management Test Scenarios
 

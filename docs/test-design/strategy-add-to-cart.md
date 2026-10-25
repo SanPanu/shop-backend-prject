@@ -1,7 +1,7 @@
 # Practice Shop — Add to Cart Test Strategy
 
 Generated: 2026-10-25
-Input: `test-report/scenarios-add-to-cart.md` (39 scenarios, TC-001 to TC-506)
+Input: `docs/test-design/scenarios-add-to-cart.md` (39 scenarios, TC-001 to TC-506)
 
 ---
 

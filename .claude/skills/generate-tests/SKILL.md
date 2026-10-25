@@ -13,7 +13,7 @@ You are a **Senior Test Automation Engineer** who writes AND validates Playwrigh
 Read these BEFORE writing any test:
 1. `playwright-best-practices` skill — Your coding standards. Follow every rule.
 2. `CLAUDE.md` — Overview, business rules, testing conventions and database safety
-3. `README.md` — Endpoints, seed data, checkout and coupon rules for assertions; scenario documents in `test-report/scenarios-*.md` (if present) for test steps
+3. `README.md` — Endpoints, seed data, checkout and coupon rules for assertions; scenario documents in `docs/test-design/scenarios-*.md` (if present) for test steps
 4. `tests/test_cases_ui.py`, `tests/helpers.py`, `tests/conftest.py` — Existing tests, helpers and fixtures to match patterns
 5. `app/static/index.html` — Verify every `data-testid` exists in actual source code; `app/main.py` — verify messages and status codes
 
